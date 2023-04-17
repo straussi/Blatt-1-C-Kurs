@@ -1,0 +1,187 @@
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c -o test.exe
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./test.exe
+Hallo Welt!@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Hallo Welt!@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Hallo Welt!@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Hallo Welt! 
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Hallo Welt! 
+summe= 12
+differenz= -2
+produkt= 35
+quotient= 0
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+test.c: In function ‘main’:
+test.c:14:24: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long double’ [-Wformat=]
+   14 |     printf("quotient= %d\n", quotient);
+      |                       ~^     ~~~~~~~~
+      |                        |     |
+      |                        int   long double
+      |                       %Lf
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+test.c: In function ‘main’:
+test.c:12:23: warning: conversion lacks type at end of format [-Wformat=]
+   12 |     sprintf(buffer, "%q", quotient);
+      |                       ^
+test.c:12:21: warning: too many arguments for format [-Wformat-extra-args]
+   12 |     sprintf(buffer, "%q", quotient);
+      |                     ^~~~
+test.c:17:12: warning: format not a string literal and no format arguments [-Wformat-security]
+   17 |     printf(buffer);
+      |            ^~~~~~
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+test.c: In function ‘main’:
+test.c:12:24: warning: format ‘%qu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘long double’ [-Wformat=]
+   12 |     sprintf(buffer, "%quotient", quotient);
+      |                      ~~^         ~~~~~~~~
+      |                        |         |
+      |                        |         long double
+      |                        long long unsigned int
+      |                      %Lf
+test.c:17:12: warning: format not a string literal and no format arguments [-Wformat-security]
+   17 |     printf(buffer);
+      |            ^~~~~~
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+test.c: In function ‘main’:
+test.c:12:23: warning: conversion lacks type at end of format [-Wformat=]
+   12 |     sprintf(buffer, "%q", quotient);
+      |                       ^
+test.c:12:21: warning: too many arguments for format [-Wformat-extra-args]
+   12 |     sprintf(buffer, "%q", quotient);
+      |                     ^~~~
+test.c:17:12: warning: format not a string literal and no format arguments [-Wformat-security]
+   17 |     printf(buffer);
+      |            ^~~~~~
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+test.c: In function ‘main’:
+test.c:17:12: warning: format not a string literal and no format arguments [-Wformat-security]
+   17 |     printf(buffer);
+      |            ^~~~~~
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+test.c: In function ‘main’:
+test.c:17:12: warning: implicit declaration of function ‘stringify’ [-Wimplicit-function-declaration]
+   17 |     printf(stringify(quotient));
+      |            ^~~~~~~~~
+test.c:17:12: warning: passing argument 1 of ‘printf’ makes pointer from integer without a cast [-Wint-conversion]
+   17 |     printf(stringify(quotient));
+      |            ^~~~~~~~~~~~~~~~~~~
+      |            |
+      |            int
+In file included from test.c:1:
+/usr/include/stdio.h:332:43: note: expected ‘const char * restrict’ but argument is of type ‘int’
+  332 | extern int printf (const char *__restrict __format, ...);
+      |                    ~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+test.c:17:5: warning: format not a string literal and no format arguments [-Wformat-security]
+   17 |     printf(stringify(quotient));
+      |     ^~~~~~
+/usr/bin/ld: /tmp/ccMzxRGN.o: in function `main':
+test.c:(.text+0xde): undefined reference to `stringify'
+collect2: error: ld returned 1 exit status
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Hallo Welt! 
+summe = 12
+differenz = -2
+produkt = 35
+quotient = 0.000000@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Hallo Welt! 
+summe = 12
+differenz = -2
+produkt = 35
+quotient = 0.000000@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc -std=c11 -Wextra -Wpedantic
+gcc: fatal error: no input files
+compilation terminated.
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc -std=c11 -Wextra -Wpedantic -Wall test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Hallo Welt! 
+summe = 12
+differenz = -2
+produkt = 35
+quotient = 0.000000@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc -std=c11 -Wextra -Wpedantic -Wall test.c
+test.c: In function ‘main’:
+test.c:9:11: warning: unused variable ‘quotient’ [-Wunused-variable]
+    9 |     float quotient = x / y;
+      |           ^~~~~~~~
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc -std=c11 -Wextra -Wpedantic -Wall test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Hallo Welt! 
+summe = 12
+differenz = -2
+produkt = 35
+quotient = 0.714286@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc -std=c11 -Wextra -Wpedantic -Wall test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Hallo Welt! 
+summe = 12
+differenz = -2
+produkt = 35
+quotient = 0.714286 
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc -std=c11 -Wextra -Wpedantic -Wall test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Hallo Welt! 
+summe = 12
+differenz = -2
+produkt = 35
+quotient = 0.714286 
+Sei m 128 
+Die letzte Nachkommastelle von m ist 8 
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc -std=c11 -Wextra -Wpedantic -Wall test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc -std=c11 -Wextra -Wpedantic -Wall test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Aufgabe 2: 
+Hallo Welt! 
+Aufgabe 3: 
+summe = 12
+differenz = -2
+produkt = 35
+quotient = 
+0.714286 
+Aufgabe 4:Sei m 128. 
+Die letzte Nachkommastelle von m ist 8 
+Aufgabe 5: 
+633f?6440@@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ gcc -std=c11 -Wextra -Wpedantic -Wall test.c
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Aufgabe 2: 
+Hallo Welt! 
+Aufgabe 3: 
+summe = 12
+differenz = -2
+produkt = 35
+quotient = 
+0.714286 
+Aufgabe 4:Sei m 128. 
+Die letzte Nachkommastelle von m ist 8 
+Aufgabe 5: 
+63 
+3f 
+? 
+64 
+40 
+@ 
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ manual ascii
+bash: manual: command not found
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ man ascii
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out
+Aufgabe 2: 
+Hallo Welt! 
+Aufgabe 3: 
+summe = 12
+differenz = -2
+produkt = 35
+quotient = 
+0.714286 
+Aufgabe 4:Sei m 128. 
+Die letzte Nachkommastelle von m ist 8 
+Aufgabe 5: 
+63 
+3f 
+? 
+64 
+40 
+@ 
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ ./a.out > log.txt
+@straussi ➜ /workspaces/C-Kurs-Uni-Regensburg (main) $ 
