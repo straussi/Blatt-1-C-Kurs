@@ -1,5 +1,6 @@
 #include <stdio.h>
-
+/*Aufgabe 1 wurde durchgeführt. Entsprechende Relikte sind nicht in diesem Ordner zu finden.
+Auf Nachfrage können die Aufgaben jedoch nochmals vorgeführt werden.*/
 int main(void){
     printf("Aufgabe 2: \n");
     printf("Hallo Welt! \n");
