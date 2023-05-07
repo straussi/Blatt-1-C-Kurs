@@ -49,6 +49,7 @@ int main() {
     } else if (funktion=='l') {
         printf("Gib einen natürlicher-Logarithmus-Definitionsbereich ein! \n Anfangswert:");
         scanf("%lf", &afln);
+        if(afln <= 0) {printf("Der komplexe Logi ist erst in Ana III dran. Gedulde dich!");} else {
         printf("Endwert: \n");
         scanf("%lf", &ewln);
         printf("Schrittweite: \n");
@@ -60,10 +61,11 @@ int main() {
                     fprintf(file, "%.2f, %.2f \n", x, logi);
                     }
             fclose(file);
-        printf("Die Wertepaare (x|ln(x)) im Bereich [%lf,%lf] wurden in 'wertepaareLN.txt' abgespeichert. \n)", afln, ewln);
+        printf("Die Wertepaare (x|ln(x)) im Bereich [%lf,%lf] wurden in 'wertepaareLN.txt' abgespeichert. \n)", afln, ewln);}
     } else if (funktion=='r') {
         printf("Gib einen Quadratwurzel-Definitionsbereich ein! \n Anfangswert:");
         scanf("%lf", &afrt);
+        if(afrt < 0) {printf("Wir tun mal so als gäbs keine komplexen Zahlen ;)");} else {
         printf("Endwert: \n");
         scanf("%lf", &ewrt);
         printf("Schrittweite: \n");
@@ -75,7 +77,7 @@ int main() {
                     fprintf(file, "%.2f, %.2f \n", x, worzel);
                     }
             fclose(file);
-        printf("Die Wertepaare (x|x^(1/2)) im Bereich [%lf,%lf] wurden in 'wertepaareRT.txt' abgespeichert. \n)", afrt, ewrt);
+        printf("Die Wertepaare (x|x^(1/2)) im Bereich [%lf,%lf] wurden in 'wertepaareRT.txt' abgespeichert. \n)", afrt, ewrt);}
     } else if (funktion=='n') {
         printf("Gib einen Absolutbetrag-Definitionsbereich ein! \n Anfangswert:");
         scanf("%lf", &afnorm);
