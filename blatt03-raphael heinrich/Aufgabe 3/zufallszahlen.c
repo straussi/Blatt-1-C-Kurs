@@ -45,15 +45,15 @@ int main() {
     }
     long histo[10] = { a,b,c,d,e,f,g,h,k,l};
     long sum = a+b+c+d+e+f+g+h+l+k;
-    double mwa = a/sum;
-    double mwb = b/sum;
-    double mwc = c/sum;
-    double mwd = d/sum;
-    double mwe = e/sum;
-    double mwf = f/sum;
-    double mwg = f/sum;
-    double mwh = h/sum;
-    double mwk = k/sum;
-    double mwl = l/sum;
-    printf(" [0.0,0.1): %2.1f % \n [0.1,0.2): %2.1f %\n [0.2,0.3): %2.1f %\n [0.3,0.4): %2.1f %\n [0.4,0.5): %2.1f %\n [0.5,0.6): %2.1f %\n [0.6,0.7): %2.1f %\n [0.7,0.8): %2.1f %\n [0.8,0.9): %2.1f %\n [0.9,1.0): %2.1f %\n", mwa, mwb, mwc, mwd, mwe, mwf, mwg, mwh, mwk, mwl);
+    double mwa = (double)a /sum;
+    double mwb = (double)b /sum;
+    double mwc = (double)c /sum;
+    double mwd = (double)d /sum;
+    double mwe = (double)e /sum;
+    double mwf = (double)f /sum;
+    double mwg = (double)f /sum;
+    double mwh = (double)h /sum;
+    double mwk = (double)k /sum;
+    double mwl = (double)l /sum;
+    printf(" [0.0,0.1): %2.4f % \n [0.1,0.2): %2.4f %\n [0.2,0.3): %2.4f %\n [0.3,0.4): %2.4f %\n [0.4,0.5): %2.4f %\n [0.5,0.6): %2.4f %\n [0.6,0.7): %2.4f %\n [0.7,0.8): %2.4f %\n [0.8,0.9): %2.4f %\n [0.9,1.0): %2.4f %\n", mwa, mwb, mwc, mwd, mwe, mwf, mwg, mwh, mwk, mwl);
 }
